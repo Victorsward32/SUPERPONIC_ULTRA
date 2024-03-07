@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAF7A6">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".HydroponicPlantActivity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/strawberry" />
+
+        <TextView
+            android:id="@+id/nutrientsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Nutrients from Plant:
+
+Strawberries require essential macronutrients (nitrogen, phosphorus, potassium) and micronutrients (calcium, magnesium, iron, etc.) for healthy growth. A well-balanced nutrient solution is crucial in hydroponics to support strawberry plant growth, flowering, and fruit production."
+            android:textColor="#070707"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/growingDurationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nutrientsTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Plant Growing Duration:
+
+The growth duration for hydroponic strawberries can vary depending on the specific strawberry variety, environmental conditions, and the hydroponic system used. On average, it takes around 4-6 months from planting to the first fruit harvest for most hydroponically grown strawberries."
+            android:textColor="#070707"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/diseaseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/growingDurationTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Diseases Occurring During Growth:
+Strawberries can be susceptible to various diseases, including:
+Botrytis (gray mold): This fungal disease can affect strawberry plants, especially in conditions of high humidity. Proper humidity control and regular monitoring are essential in hydroponics to prevent this issue.
+Aphids, spider mites, and other pests: These common pests can infest strawberry plants, and they may also transmit diseases."
+            android:textColor="#070707"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/fertilizersTextView"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/diseaseTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_background"
+            android:text="Buy Nutrition"
+            android:textColor="#ffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

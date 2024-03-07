@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAF7A6">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".HydroponicPlantActivity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/capsicum" />
+
+        <TextView
+            android:id="@+id/nutrientsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Nutrients: Capsicum plants require essential macronutrients (nitrogen, phosphorus, potassium) and micronutrients (calcium, magnesium, iron, etc.) for healthy growth. Hydroponic solutions should provide these nutrients in the right balance."
+            android:textColor="#070707"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/growingDurationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nutrientsTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Plant Growing Duration: Capsicum plants grown hydroponically typically take 70 to 85 days from seed to harvest, but the exact duration can vary based on the specific cultivar, environmental conditions, and other factors."
+            android:textColor="#070707"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/diseaseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/growingDurationTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Diseases Occurring During Growth: Capsicum plants can be susceptible to various diseases, including:
+
+Phytophthora root rot: This soil-borne pathogen can infect the plant's root system. However, in a hydroponic system, it is less common because there's no soil.
+
+Powdery mildew: This fungal disease can affect the leaves and stems of capsicum plants, especially in conditions of high humidity.
+
+Aphids, whiteflies, and thrips: These are common pests that can affect capsicum plants, and they can transmit viruses that cause diseases."
+            android:textColor="#070707"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/fertilizersTextView"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/diseaseTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_background"
+            android:text="Buy Nutrition"
+            android:textColor="#ffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

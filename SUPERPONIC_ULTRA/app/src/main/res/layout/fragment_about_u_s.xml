@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5d78f"
+    tools:context=".Demoone.AboutUS">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/Grouptext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Our Group"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/Grouptext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Grouptext"
+                app:srcCompat="@drawable/grouphoto"/>
+
+            <TextView
+                android:id="@+id/Grouptext2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Meet Our Team-G11"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintTop_toBottomOf="@id/imageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/MotiveText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Our Motive"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/Grouptext2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/motiveDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Revolutionizing Agriculture: Our goal is to cultivate fresh vegetables indoors using innovative hydroponic systems. We empower sustainable farming, ensuring an eco-friendly, efficient, and space-saving solution for a greener, healthier future."
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/MotiveText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/ContactText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Contact Us"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/motiveDescription"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/contactDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Email: example@gmail.com\nPhone: +91 8767564623"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/ContactText"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

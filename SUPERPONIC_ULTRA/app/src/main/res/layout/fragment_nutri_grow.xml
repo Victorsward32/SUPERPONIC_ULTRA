@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ABD6DF"
+    tools:context=".Demoone.NutriGrowFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="50dp"
+        app:cardCornerRadius="40dp"
+        app:cardBackgroundColor="#7CB46B"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="313dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/buynutrlogo" />
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- First Item -->
+<!--        <TextView-->
+<!--            android:id="@+id/TextBuy"-->
+<!--            style="@style/Theme.Material3.Dark"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Nutrition"-->
+<!--            android:textColor="#F3AA4E"-->
+<!--            android:textSize="25dp"-->
+<!--            android:textStyle="bold" />-->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/white"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="#E8EBE2"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/item1_image"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:autofillHints="product Image"
+                        android:clickable="true"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/tomattow_fer"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageView
+                        android:id="@+id/item1_image2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:outlineSpotShadowColor="@color/black"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/addcart" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <!-- Name of the first product -->
+                    <TextView
+                        android:id="@+id/item1_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Tomato Fertilizer"
+                        android:textColor="#333333"
+                        android:textSize="20sp" />
+
+                    <!-- Description of the first product -->
+                    <TextView
+                        android:id="@+id/item1_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="make your tomato plant completlely healthy with this product"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                    <!-- Star Rating for the first product -->
+                    <RatingBar
+                        android:id="@+id/item1_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:indeterminateTint="@color/starColor"
+                        android:isIndicator="true"
+                        android:numStars="4"
+                        android:progressTint="@color/starColor"
+                        android:rating="4"
+                        android:scaleX="0.75"
+                        android:scaleY="0.75"
+                        android:stepSize="1" />
+
+                    <!-- Buy button for the first product -->
+                    <Button
+                        android:id="@+id/item1_buy_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="BUY NOW"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/white"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="#E8EBE2"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/item2_image"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:clickable="true"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pepperbell"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageView
+                        android:id="@+id/item2_image2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:outlineSpotShadowColor="@color/black"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/addcart" />
+
+                </LinearLayout>
+
+<!--                &lt;!&ndash; Image of the second item &ndash;&gt;-->
+<!--                <ImageView-->
+<!--                    android:id="@+id/item2_image"-->
+<!--                    android:layout_width="125dp"-->
+<!--                    android:layout_height="125dp"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:paddingTop="10dp"-->
+<!--                    android:paddingLeft="10dp"-->
+
+<!--                    android:src="@drawable/pepperbell" />-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <!-- Name of the second product -->
+                    <TextView
+                        android:id="@+id/item2_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Capsicum"
+                        android:textColor="#333333"
+                        android:textSize="20sp" />
+
+                    <!-- Description of the second product -->
+
+                    <!-- Star Rating for the second product -->
+
+                    <TextView
+                        android:id="@+id/item2_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="make your Bellpaper plant completlely healthy with this product"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                    <RatingBar
+                        android:id="@+id/item2_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:indeterminateTint="@color/starColor"
+                        android:numStars="4"
+                        android:progressTint="@color/starColor"
+                        android:rating="3"
+                        android:stepSize="1"
+                        android:isIndicator="true"
+                        android:scaleX="0.75"
+                        android:scaleY="0.75"
+                        />
+
+                    <!-- Buy button for the second product -->
+                    <Button
+                        android:id="@+id/item2_buy_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/button_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="BUY NOW"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/white"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="#E8EBE2"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/item3_image"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:autofillHints="product Image"
+                        android:clickable="true"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/fert3"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageView
+                        android:id="@+id/item3_image2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:outlineSpotShadowColor="@color/black"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/addcart" />
+
+                </LinearLayout>
+
+<!--                &lt;!&ndash; Image of the third item &ndash;&gt;-->
+<!--                <ImageView-->
+<!--                    android:id="@+id/item3_image"-->
+<!--                    android:layout_width="125dp"-->
+<!--                    android:layout_height="125dp"-->
+<!--                    android:paddingTop="10dp"-->
+<!--                    android:paddingLeft="10dp"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:src="@drawable/fert3" />-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <!-- Name of the third product -->
+                    <TextView
+                        android:id="@+id/item3_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Green Veggies"
+                        android:textColor="#333333"
+                        android:textSize="20sp" />
+
+                    <!-- Description of the third product -->
+                    <TextView
+                        android:id="@+id/item3_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="make your all green veggies completlely healthy with this product"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                    <!-- Star Rating for the third product -->
+                    <RatingBar
+                        android:id="@+id/item3_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:indeterminateTint="@color/starColor"
+                        android:numStars="4"
+                        android:progressTint="@color/starColor"
+                        android:rating="3"
+                        android:stepSize="1"
+                        android:isIndicator="true"
+                        android:scaleX="0.75"
+                        android:scaleY="0.75"/>
+
+                    <!-- Buy button for the third product -->
+                    <Button
+                        android:id="@+id/item3_buy_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/button_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="BUY NOW"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Fourth Item -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/white"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="#E8EBE2"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/item4_image"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:clickable="true"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pesti_fert"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageView
+                        android:id="@+id/item4_image2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:outlineSpotShadowColor="@color/black"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/addcart" />
+
+                </LinearLayout>
+
+<!--                &lt;!&ndash; Image of the fourth item &ndash;&gt;-->
+<!--                <ImageView-->
+<!--                    android:id="@+id/item4_image"-->
+<!--                    android:layout_width="125dp"-->
+<!--                    android:layout_height="125dp"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:paddingTop="10dp"-->
+<!--                    android:paddingLeft="10dp"-->
+<!--                    android:src="@drawable/pesti_fert" />-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <!-- Name of the fourth product -->
+                    <TextView
+                        android:id="@+id/item4_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Neem Pesticide"
+                        android:textColor="#333333"
+                        android:textSize="20sp" />
+
+                    <!-- Description of the fourth product -->
+                    <TextView
+                        android:id="@+id/item4_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="make your all plant completlely healthy with this product"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                    <!-- Star Rating for the fourth product -->
+                    <RatingBar
+                        android:id="@+id/item4_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:indeterminateTint="@color/starColor"
+                        android:numStars="4"
+                        android:progressTint="@color/starColor"
+                        android:rating="4"
+                        android:stepSize="1"
+                        android:isIndicator="true"
+                        android:scaleX="0.75"
+                        android:scaleY="0.75"/>
+
+                    <!-- Buy button for the fourth product -->
+                    <Button
+                        android:id="@+id/item4_buy_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/button_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="BUY NOW"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

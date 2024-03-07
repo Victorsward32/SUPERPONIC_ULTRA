@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:title="Dashboard"
+    android:icon="@drawable/dashboard"
+    android:id="@+id/dashboard1"
+    />
+
+    <item
+        android:title="Plantarium"
+        android:icon="@drawable/scan"
+        android:id="@+id/plantarium"
+        />
+
+    <item
+        android:title="PlantGaurd"
+        android:icon="@drawable/scan"
+        android:id="@+id/plantGaurd"
+        />
+
+    <item
+        android:title="ChatAssist"
+        android:icon="@drawable/chat"
+        android:id="@+id/chatAssist"
+        />
+    <item
+        android:title="NutriGrow"
+        android:icon="@drawable/plantaruim"
+        android:id="@+id/nutriGrow"
+        />
+    <item
+        android:title="PlantLive"
+        android:icon="@drawable/live"
+        android:id="@+id/plantLive"
+        />
+    <item
+        android:title="AboutUs"
+        android:icon="@drawable/baseline_groups_3_24"
+        android:id="@+id/about_Us"
+        />
+
+
+</menu>

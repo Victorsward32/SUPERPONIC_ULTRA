@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CACE91"
+    tools:context=".Demoone.ChatAssistanceFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:text="PlantGaurd"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="34sp" />-->
+            <ImageView
+                android:id="@+id/textview"
+                android:layout_width="match_parent"
+                android:src="@drawable/plantgaurdlogo"
+                android:layout_height="120dp"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:layout_marginTop="64dp"
+                android:src="@drawable/plantdocimg"
+                android:autofillHints="this screen will show your plant Image"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:scaleType="centerInside" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="32dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/queryEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Add your plant name and your Query"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/sendPromptButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button_background_purple"
+                    android:text="Send query"
+                    android:textColor="@color/white"/>
+
+                <Button
+                    android:id="@+id/selectImageButton"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button_background_purple"
+                    android:text="Select Image"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="Report"
+                android:textColor="@color/buyButtonColor"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"/>
+            <ProgressBar
+                android:id="@+id/sendPromptProgressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:visibility="gone" />
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="300dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_marginBottom="20dp"-->
+<!--                android:layout_marginRight="30dp"-->
+<!--                android:layout_marginLeft="30dp"-->
+<!--                android:autofillHints="you can see report here"-->
+<!--                app:cardBackgroundColor="#FFD8BD0E"-->
+<!--                app:cardCornerRadius="20dp"-->
+<!--                >-->
+<!--                <ScrollView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/modelResponseTextView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                android:paddingStart="30dp"-->
+<!--                android:paddingEnd="30dp" />-->
+<!--                </ScrollView>-->
+<!--        </LinearLayout>-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                app:cardBackgroundColor="#FFD8BD0E"
+                app:cardCornerRadius="20dp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/modelResponseTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="16dp"
+                            android:paddingStart="30dp"
+                            android:paddingEnd="30dp" />
+
+                        <!-- Add more content views here if needed -->
+                        </ScrollView>
+                    </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

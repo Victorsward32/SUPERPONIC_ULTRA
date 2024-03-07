@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAF7A6">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".HydroponicPlantActivity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/spinach" />
+
+        <TextView
+            android:id="@+id/nutrientsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Nutrients from Plant:
+
+Spinach is a leafy green that primarily requires essential macronutrients (nitrogen, phosphorus, potassium) and micronutrients (calcium, magnesium, iron, etc.) for healthy leaf and stem growth. In hydroponics, a balanced nutrient solution is essential to support spinach's vigorous foliage development."
+            android:textColor="#070707"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/growingDurationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nutrientsTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Plant Growing Duration:
+
+Spinach is a relatively fast-growing leafy green. In hydroponics, you can typically harvest spinach leaves within 30 to 50 days from seed, depending on the specific spinach variety, environmental conditions, and nutrient management."
+            android:textColor="#070707"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/diseaseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/growingDurationTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Diseases Occurring During Growth:
+
+Spinach is generally less prone to diseases in hydroponic systems due to the absence of soil. However, some potential issues to be aware of include:
+
+Powdery mildew: This fungal disease can affect spinach in conditions of high humidity. Proper ventilation and humidity control are essential in hydroponics to prevent this.
+
+Aphids, whiteflies, and spider mites: These common pests can affect spinach in hydroponic systems and may also transmit diseases."
+            android:textColor="#070707"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/fertilizersTextView"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/diseaseTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_background"
+            android:text="Buy Nutrition"
+            android:textColor="#ffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
