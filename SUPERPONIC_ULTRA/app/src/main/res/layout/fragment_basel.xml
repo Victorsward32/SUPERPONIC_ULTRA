@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/basel_fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DAF7A6">
+    tools:context=".Demoone.BaselFragment" >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAF7A6"
+   >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -64,7 +70,7 @@ Aphids, whiteflies, and spider mites: These common pests can affect basil in hyd
 
         <Button
             android:id="@+id/fertilizersbutton1"
-            android:layout_width="136dp"
+            android:layout_width="147dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/diseaseTextView"
             android:layout_centerHorizontal="true"
@@ -79,3 +85,4 @@ Aphids, whiteflies, and spider mites: These common pests can affect basil in hyd
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

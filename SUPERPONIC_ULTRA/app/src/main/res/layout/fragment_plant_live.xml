@@ -3,8 +3,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/plantdocimg"
+    android:background="#606060"
     tools:context=".Demoone.PlantLiveFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Live"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/buyButtonColor"
+
+            android:textStyle="bold"
+            android:textSize="35dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="552dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/liveplant"
+            android:background="@drawable/backgroud_weather"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Here you can see Live Image or footage of your plant"
+            android:textStyle="normal"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:textSize="22sp"/>
+
+
+
+    </LinearLayout>
 
     <!-- TODO: Update blank fragment layout -->
 

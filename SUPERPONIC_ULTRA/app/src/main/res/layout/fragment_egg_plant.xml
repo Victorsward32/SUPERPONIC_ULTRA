@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container_eggplant"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#DAF7A6">
@@ -68,7 +72,7 @@ Powdery mildew and aphids: These can affect eggplants, especially in conditions 
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/fertilizersTextView"
+            android:id="@+id/eggplant_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/diseaseTextView"
@@ -85,3 +89,4 @@ Powdery mildew and aphids: These can affect eggplants, especially in conditions 
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
