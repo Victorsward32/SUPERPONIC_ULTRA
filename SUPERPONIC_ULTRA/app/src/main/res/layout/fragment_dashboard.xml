@@ -457,98 +457,196 @@
         android:textColor="@color/white"
         
 />
-    <LinearLayout
-        android:id="@+id/SecondHorizontalLinear"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="20dp"
-            app:cardBackgroundColor="#ADF0D1"
-            app:cardCornerRadius="20dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <!-- CardView 3 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="#ADF0D1"
+                app:cardCornerRadius="20dp" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:text="Temprature"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#00203F"/>
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                android:src="@drawable/temprature"
-                />
-            <TextView
-                android:id="@+id/temp_data"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textColor="#00203F"
+                    <!-- Title TextView -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="Temperature"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#00203F"/>
 
-                android:text="NA"
+                    <!-- Image -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/temprature"/>
 
-                />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    <!-- Data TextView -->
+                    <TextView
+                        android:id="@+id/temprature_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="#00203F"
+                        android:text="NA"/>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="20dp"
-            android:layout_weight="1"
-            app:cardBackgroundColor="#ADF0D1"
-            app:cardCornerRadius="20dp">
+                </LinearLayout>
 
+            </androidx.cardview.widget.CardView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <!-- CardView 4 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="#ADF0D1"
+                app:cardCornerRadius="20dp" >
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:text="Ph Levels"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="#00203F"/>
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/phtest1"
-                    />
-                <TextView
-                    android:id="@+id/Ph_data"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!-- Title TextView -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="Ph Level"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#00203F"/>
+
+                    <!-- Image -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/phtest1"/>
+
+                    <!-- Data TextView -->
+                    <TextView
+                        android:id="@+id/phstatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="#00203F"
+                        android:text="NA"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal">
+
+            <!-- CardView 3 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="#ADF0D1"
+                app:cardCornerRadius="20dp" >
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:textColor="#00203F"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                    android:text="NA"
+                    <!-- Title TextView -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="Fan Status"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#00203F"/>
 
-                    />
-            </LinearLayout>
+                    <!-- Image -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/coolingsystem"/>
 
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+                    <!-- Data TextView -->
+                    <TextView
+                        android:id="@+id/fanStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="#00203F"
+                        android:text="N/A"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- CardView 4 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="#ADF0D1"
+                app:cardCornerRadius="20dp" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!-- Title TextView -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="Humidity"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#00203F"/>
+
+                    <!-- Image -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/humiditysensor"/>
+
+                    <!-- Data TextView -->
+                    <TextView
+                        android:id="@+id/humidity_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="#00203F"
+                        android:text="NA"/>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
 
         <TextView
             android:id="@+id/Controls_layout"
@@ -567,84 +665,182 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="15dp">
 
-            <!-- LED Control -->
-            <LinearLayout
+            <!-- CardView 1 -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="15dp"
-                android:gravity="center_vertical">
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="15dp">
 
-                <!-- LED Image -->
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/lightbulb"
-                    android:layout_marginRight="8dp"/>
-
-                <!-- LED Name -->
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Light On/Off"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"
-                    android:layout_marginRight="8dp"/>
+                    android:orientation="horizontal">
 
-                <!-- LED Toggle Button -->
-                <Switch
-                    android:id="@+id/toggleButtonLED"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:checked="false" />
+                    <!-- ImageView -->
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/lightbulb" />
 
-            </LinearLayout>
+                    <!-- TextView -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="LED"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:padding="10dp"/>
 
-            <!-- Motors Control -->
-            <LinearLayout
+                    <!-- Switch -->
+                    <Switch
+                        android:id="@+id/led_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- CardView 2 -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="15dp"
-                android:gravity="center_vertical">
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="15dp">
 
-                <!-- Motors Toggle Button -->
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/pump"
-                    android:layout_marginStart="8dp"/>
-
-
-                <!-- Motors Name -->
-                <TextView
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Pump On/Off"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:gravity="center"/>
+                    android:orientation="horizontal">
 
-                <!-- Motors Image -->
-                <Switch
-                    android:id="@+id/toggleButtonMotors"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:checked="false" />
+                    <!-- ImageView -->
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/electricmotor" />
 
+                    <!-- TextView -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pump"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:padding="10dp"/>
 
-            </LinearLayout>
+                    <!-- Switch -->
+                    <Switch
+                        android:id="@+id/pump1_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
+            <!-- CardView 3 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- ImageView -->
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/pumpb" />
+
+                    <!-- TextView -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Solution A"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:padding="10dp"/>
+
+                    <!-- Switch -->
+                    <Switch
+                        android:id="@+id/pump2_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- Repeat the structure for additional CardViews -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- ImageView -->
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/pump" />
+
+                    <!-- TextView -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Solution B "
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:padding="10dp"/>
+
+                    <!-- Switch -->
+                    <Switch
+                        android:id="@+id/pump3_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
+
 
 
 

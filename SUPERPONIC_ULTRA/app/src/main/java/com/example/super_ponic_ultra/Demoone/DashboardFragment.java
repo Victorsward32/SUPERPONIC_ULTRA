@@ -24,6 +24,8 @@
 
 package com.example.super_ponic_ultra.Demoone;
 
+import static android.content.ContentValues.TAG;
+
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Address;
@@ -31,11 +33,13 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -51,6 +55,11 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.super_ponic_ultra.R;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -65,6 +74,9 @@ import java.util.Locale;
 
 public class DashboardFragment extends Fragment {
 
+    Switch led,pump,solA,solB;
+    TextView temp,ph,fan,humiditystatus;
+
     private ProgressBar loadingPB;
     private TextView cityNameTv, temperatureTV, conditionTV, windTV, cloudTV, humidityTV;
     private TextInputEditText CityEdit;
@@ -78,6 +90,20 @@ public class DashboardFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_dashboard, container, false);
 
+        ///Realtime Db Status id Declaration
+        //switch
+        led=rootView.findViewById(R.id.led_button);
+        pump=rootView.findViewById(R.id.pump1_button);
+        solA=rootView.findViewById(R.id.pump2_button);
+        solB=rootView.findViewById(R.id.pump3_button);
+
+        //textview
+        temp=rootView.findViewById(R.id.temprature_status);
+        ph=rootView.findViewById(R.id.phstatus);
+        fan=rootView.findViewById(R.id.fanStatus);
+        humiditystatus=rootView.findViewById(R.id.humidity_status);
+
+
         // Initialize UI elements
         cityNameTv = rootView.findViewById(R.id.idTVCityName);
         temperatureTV = rootView.findViewById(R.id.idTVTemperature);
@@ -89,6 +115,85 @@ public class DashboardFragment extends Fragment {
         cloudTV = rootView.findViewById(R.id.idTVCloudTextMetric);
         humidityTV = rootView.findViewById(R.id.idTVCHumidTextMetric);
         countryFlag = rootView.findViewById(R.id.idIVFlag);
+
+
+
+        // Write a message to the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference();
+
+        led.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                myRef.child("LED").setValue(true);
+            } else {
+                myRef.child("LED").setValue(false);
+            }
+        });
+        pump.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                myRef.child("Pump").setValue(true);
+            } else {
+                myRef.child("Pump").setValue(false);
+            }
+        });
+        solA.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                myRef.child("PumpA").setValue(true);
+            } else {
+                myRef.child("PumpA").setValue(false);
+            }
+        });
+        solB.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                myRef.child("PumpB").setValue(true);
+            } else {
+                myRef.child("PumpB").setValue(false);
+            }
+        });
+
+
+
+//// Write Realtime DB
+//        // Write a message to the database
+//        FirebaseDatabase database = FirebaseDatabase.getInstance();
+//        DatabaseReference myRef = database.getReference("Sensors"); // Update the reference to point to the "Sensors" node
+
+// Write Realtime DB
+        DatabaseReference myRef1 = database.getReference("Sensors");
+        myRef1.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // Retrieve sensor data
+                Double humidity = dataSnapshot.child("Humidity").getValue(Double.class);
+                Double phLevel = dataSnapshot.child("Phlevel").getValue(Double.class);
+                Double temperature = dataSnapshot.child("temp").getValue(Double.class);
+                String fanStatus = dataSnapshot.child("fanstatus").getValue(String.class);
+
+                // Update UI elements with sensor data
+                if (humidity != null) {
+                    humiditystatus.setText(" " + humidity +" %");
+                }
+                if (phLevel != null) {
+                    ph.setText(" " + phLevel);
+                }
+                if (temperature != null) {
+                    temp.setText(" " + temperature +" C");
+                }
+                if (fanStatus != null) {
+                    fan.setText(" " + fanStatus);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
+
+
+
 
         locationManager = (LocationManager) requireActivity().getSystemService(requireContext().LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {

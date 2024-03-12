@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "768308881766",
+    "firebase_url": "https://nitroponicsesp32-default-rtdb.firebaseio.com",
+    "project_id": "nitroponicsesp32",
+    "storage_bucket": "nitroponicsesp32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768308881766:android:97473c00e4b48393ce40a7",
+        "android_client_info": {
+          "package_name": "com.example.super_ponic_ultra"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvoKFtMmfoAclPzkrpM7nE-ELniR0_2Sg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
