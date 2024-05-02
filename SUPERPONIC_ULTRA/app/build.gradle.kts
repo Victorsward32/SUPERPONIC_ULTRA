@@ -60,5 +60,9 @@ dependencies {
     implementation ("com.google.android.gms:play-services-location:18.0.0")
     implementation ("com.squareup.picasso:picasso:2.71828")
 
+    //Room DB
+    implementation("androidx.room:room-runtime:2.6.1")
+    annotationProcessor ("androidx.room:room-compiler:2.6.1")
+
 
 }

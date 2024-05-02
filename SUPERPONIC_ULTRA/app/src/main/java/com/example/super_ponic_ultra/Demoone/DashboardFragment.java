@@ -124,30 +124,30 @@ public class DashboardFragment extends Fragment {
 
         led.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
-                myRef.child("LED").setValue(true);
+                myRef.child("/Controls/Led").setValue(true);
             } else {
-                myRef.child("LED").setValue(false);
+                myRef.child("/Controls/Led").setValue(false);
             }
         });
         pump.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
-                myRef.child("Pump").setValue(true);
+                myRef.child("/Controls/PumpC").setValue(true);
             } else {
-                myRef.child("Pump").setValue(false);
+                myRef.child("/Controls/PumpC").setValue(false);
             }
         });
         solA.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
-                myRef.child("PumpA").setValue(true);
+                myRef.child("/Controls/PumpA").setValue(true);
             } else {
-                myRef.child("PumpA").setValue(false);
+                myRef.child("/Controls/PumpA").setValue(false);
             }
         });
         solB.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
-                myRef.child("PumpB").setValue(true);
+                myRef.child("/Controls/PumpB").setValue(true);
             } else {
-                myRef.child("PumpB").setValue(false);
+                myRef.child("/Controls/PumpB").setValue(false);
             }
         });
 
@@ -159,28 +159,39 @@ public class DashboardFragment extends Fragment {
 //        DatabaseReference myRef = database.getReference("Sensors"); // Update the reference to point to the "Sensors" node
 
 // Write Realtime DB
-        DatabaseReference myRef1 = database.getReference("Sensors");
+        DatabaseReference myRef1 = database.getReference("Sensor");
         myRef1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // Retrieve sensor data
                 Double humidity = dataSnapshot.child("Humidity").getValue(Double.class);
-                Double phLevel = dataSnapshot.child("Phlevel").getValue(Double.class);
-                Double temperature = dataSnapshot.child("temp").getValue(Double.class);
-                String fanStatus = dataSnapshot.child("fanstatus").getValue(String.class);
+                Double phLevel = dataSnapshot.child("PhValue").getValue(Double.class);
+                Double temperature = dataSnapshot.child("Temperature").getValue(Double.class);
+                Boolean fanStatus = dataSnapshot.child("Fan").getValue(Boolean.class);
 
                 // Update UI elements with sensor data
                 if (humidity != null) {
                     humiditystatus.setText(" " + humidity +" %");
                 }
                 if (phLevel != null) {
+                    // Ensure that pH level is positive
+                    if (phLevel < 0) {
+                        phLevel = Math.abs(phLevel);
+                    }
+                    // Adjust pH level if it's above 14
+                    phLevel = Math.min(14.0, phLevel);
                     ph.setText(" " + phLevel);
                 }
                 if (temperature != null) {
                     temp.setText(" " + temperature +" C");
                 }
                 if (fanStatus != null) {
-                    fan.setText(" " + fanStatus);
+                    if (fanStatus){
+                        fan.setText("On");
+                    }
+                    else{
+                        fan.setText("Off");
+                    }
                 }
             }
 

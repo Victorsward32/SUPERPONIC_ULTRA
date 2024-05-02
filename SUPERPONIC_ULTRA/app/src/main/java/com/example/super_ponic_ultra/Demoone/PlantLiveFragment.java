@@ -1,66 +1,95 @@
 package com.example.super_ponic_ultra.Demoone;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import androidx.fragment.app.Fragment;
 import com.example.super_ponic_ultra.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link PlantLiveFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class PlantLiveFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private TextView liveText;
+    private WebView liveWebView;
+    private ImageButton zoomInButton;
+    private ImageButton zoomOutButton;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private static final String IP_ADDRESS = "http://192.168.160.242";
 
     public PlantLiveFragment() {
         // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment PlantLiveFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static PlantLiveFragment newInstance(String param1, String param2) {
-        PlantLiveFragment fragment = new PlantLiveFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_plant_live, container, false);
+        View view = inflater.inflate(R.layout.fragment_plant_live, container, false);
+
+        liveText = view.findViewById(R.id.livetext);
+        liveWebView = view.findViewById(R.id.live_webview);
+        zoomInButton = view.findViewById(R.id.ZoomIn);
+        zoomOutButton = view.findViewById(R.id.ZoomOut);
+
+        // Display "Live" text
+        liveText.setText("Live");
+
+        // Configure WebView
+        WebSettings settings = liveWebView.getSettings();
+        settings.setJavaScriptEnabled(true);
+        settings.setBuiltInZoomControls(true);
+        settings.setDisplayZoomControls(false);
+
+        // Set WebView client to handle page load errors
+        liveWebView.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                super.onReceivedError(view, errorCode, description, failingUrl);
+                // Display error message when WebView fails to load
+                liveText.setText("You need to connect with the same Wi-Fi that your device is connected to.");
+            }
+        });
+
+        // Load the provided IP address
+        liveWebView.loadUrl(IP_ADDRESS);
+
+        // Set click listeners for zoom buttons
+        zoomInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                zoomIn();
+            }
+        });
+
+        zoomOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                zoomOut();
+            }
+        });
+
+        // Enable touch screen ability for WebView
+        liveWebView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return false;
+            }
+        });
+
+        return view;
+    }
+
+    private void zoomIn() {
+        liveWebView.zoomIn();
+    }
+
+    private void zoomOut() {
+        liveWebView.zoomOut();
     }
 }

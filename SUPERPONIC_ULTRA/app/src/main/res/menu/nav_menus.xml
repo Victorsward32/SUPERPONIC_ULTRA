@@ -13,13 +13,13 @@
         />
 
     <item
-        android:title="PlantGaurd"
+        android:title="ChatAssist"
         android:icon="@drawable/scan"
         android:id="@+id/plantGaurd"
         />
 
     <item
-        android:title="ChatAssist"
+        android:title="PlantGaurd"
         android:icon="@drawable/chat"
         android:id="@+id/chatAssist"
         />
@@ -38,6 +38,4 @@
         android:icon="@drawable/baseline_groups_3_24"
         android:id="@+id/about_Us"
         />
-
-
 </menu>
